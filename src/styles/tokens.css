@@ -1,0 +1,72 @@
+:root,
+[data-theme="dark"] {
+  --atlas-color-base-01: #111111;
+  --atlas-color-base-02: #1d1d1d;
+  --atlas-color-base-03: #252525;
+  --atlas-color-base-04: #575757;
+  --atlas-color-primary: #174bcc;
+  --atlas-color-primary-hover: #1d55d8;
+  --atlas-color-primary-active: #123ea8;
+  --atlas-color-hover-main: #191d26;
+  --atlas-color-hover-accent: #283550;
+  --atlas-color-active-main: #1e222c;
+  --atlas-color-active-accent: #272d3a;
+  --atlas-color-border-01: #3f3f45;
+  --atlas-color-border-02: #333338;
+  --atlas-color-border-03: #6f737c;
+  --atlas-color-border-focus: #3a59a6;
+  --atlas-color-text-body: #efefef;
+  --atlas-color-text-tertiary: #949494;
+  --atlas-color-text-on-primary: #ffffff;
+  --atlas-color-text-link: #76bbff;
+
+  --atlas-color-background-default: var(--atlas-color-base-01);
+  --atlas-color-background-surface: var(--atlas-color-base-02);
+  --atlas-color-background-subtle: var(--atlas-color-base-03);
+  --atlas-color-background-interactive: var(--atlas-color-base-02);
+  --atlas-color-background-interactive-hover: var(--atlas-color-hover-main);
+  --atlas-color-background-interactive-active: var(--atlas-color-active-main);
+  --atlas-color-text-primary: var(--atlas-color-text-body);
+  --atlas-color-text-secondary: var(--atlas-color-text-tertiary);
+  --atlas-color-text-inverse: var(--atlas-color-text-on-primary);
+  --atlas-color-text-disabled: rgb(239 239 239 / 40%);
+  --atlas-color-border-default: var(--atlas-color-border-01);
+  --atlas-color-border-subtle: var(--atlas-color-border-02);
+  --atlas-color-border-strong: var(--atlas-color-border-03);
+  --atlas-color-action-primary: var(--atlas-color-primary);
+  --atlas-color-action-primary-hover: var(--atlas-color-primary-hover);
+  --atlas-color-action-primary-active: var(--atlas-color-primary-active);
+
+  --atlas-space-xs: 0.25rem;
+  --atlas-space-sm: 0.5rem;
+  --atlas-space-md: 1rem;
+  --atlas-space-ml: 1.5rem;
+  --atlas-space-lg: 2rem;
+  --atlas-space-xl: 2.5rem;
+  --atlas-space-xxl: 4rem;
+
+  --atlas-radius-checkbox: 0.125rem;
+  --atlas-radius-default: 0.25rem;
+
+  --atlas-shadow-xsmall: 0 2px 10px 0 rgb(0 0 0 / 60%);
+  --atlas-shadow-small: 0 4px 10px 0 rgb(0 0 0 / 90%);
+  --atlas-shadow-medium: 0 8px 16px 0 rgb(0 0 0 / 100%);
+  --atlas-shadow-large: 0 0 20px 0 rgb(0 0 0 / 90%);
+  --atlas-shadow-xl-drawer: -6px 0 10px 0 rgb(0 0 0 / 90%);
+
+  --atlas-font-family-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --atlas-font-size-body-2: 0.8125rem;
+  --atlas-line-height-body-2: 1.25rem;
+  --atlas-font-weight-body-2: 500;
+
+  --atlas-duration-fast: 120ms;
+  --atlas-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --atlas-focus-ring: 0 0 0 2px var(--atlas-color-background-default), 0 0 0 4px var(--atlas-color-border-focus);
+
+  --atlas-button-radius: var(--atlas-radius-default);
+  --atlas-button-focus-ring: var(--atlas-focus-ring);
+  --atlas-button-font-family: var(--atlas-font-family-sans);
+  --atlas-button-font-size: var(--atlas-font-size-body-2);
+  --atlas-button-font-weight: var(--atlas-font-weight-body-2);
+}

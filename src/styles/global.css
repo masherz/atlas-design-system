@@ -1,0 +1,27 @@
+@import "./tokens.css";
+@import "./a11y.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--atlas-color-background-default);
+  font-family: var(--atlas-font-family-sans);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--atlas-color-text-primary);
+  background: var(--atlas-color-background-default);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
