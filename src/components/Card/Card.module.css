@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  min-width: 0;
+  gap: var(--atlas-card-gap);
+  color: var(--atlas-card-text);
+  background: var(--atlas-card-background);
+  border: 1px solid transparent;
+  border-radius: var(--atlas-card-radius);
+  transition:
+    background-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    border-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    box-shadow var(--atlas-duration-fast) var(--atlas-ease-standard);
+}
+
+.card[data-full-width="true"] {
+  width: 100%;
+}
+
+.card[data-padding="none"] {
+  padding: 0;
+}
+
+.card[data-padding="medium"] {
+  padding: var(--atlas-card-padding-md);
+}
+
+.card[data-padding="large"] {
+  padding: var(--atlas-card-padding-lg);
+}
+
+.card[data-variant="stroke"] {
+  border-color: var(--atlas-card-border);
+}
+
+.card[data-elevation="small"] {
+  box-shadow: var(--atlas-card-shadow-small);
+}
+
+.card[data-elevation="medium"] {
+  box-shadow: var(--atlas-card-shadow-medium);
+}
+
+.card[data-interactive="true"] {
+  cursor: pointer;
+}
+
+.card[data-interactive="true"]:hover {
+  background: var(--atlas-card-background-hover);
+  border-color: var(--atlas-card-border-hover);
+}
+
+.card[data-interactive="true"]:focus-visible {
+  outline: none;
+  box-shadow: var(--atlas-card-focus-ring);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atlas-card-header-gap);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--atlas-card-text);
+  font-family: var(--atlas-font-family-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.description {
+  margin: 0;
+  color: var(--atlas-card-description);
+  font-family: var(--atlas-font-family-sans);
+  font-size: var(--atlas-font-size-body-2);
+  font-weight: 400;
+  line-height: var(--atlas-line-height-body-2);
+}
+
+.content {
+  min-width: 0;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--atlas-card-footer-gap);
+  min-width: 0;
+}
+
+@media (max-width: 520px) {
+  .card {
+    width: 100%;
+  }
+
+  .footer {
+    justify-content: stretch;
+  }
+
+  .footer > * {
+    flex: 1 1 auto;
+  }
+}

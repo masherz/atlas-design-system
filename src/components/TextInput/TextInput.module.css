@@ -1,0 +1,106 @@
+.root {
+  min-width: 16rem;
+}
+
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  color: var(--atlas-field-control-text);
+  background: var(--atlas-field-control-background);
+  border: 1px solid var(--atlas-field-control-border);
+  border-radius: var(--atlas-field-control-radius);
+  transition:
+    background-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    border-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    box-shadow var(--atlas-duration-fast) var(--atlas-ease-standard);
+}
+
+.control[data-size="small"] {
+  min-height: var(--atlas-field-control-height-sm);
+}
+
+.control[data-size="medium"] {
+  min-height: var(--atlas-field-control-height-md);
+}
+
+.control:hover:not([data-disabled="true"]):not([data-readonly="true"]) {
+  background: var(--atlas-field-control-background-hover);
+  border-color: var(--atlas-field-control-border-hover);
+}
+
+.control:focus-within {
+  border-color: var(--atlas-field-control-border-focus);
+  box-shadow: var(--atlas-field-control-focus-ring);
+}
+
+.control[data-invalid="true"] {
+  border-color: var(--atlas-field-control-border-error);
+}
+
+.control[data-invalid="true"]:focus-within {
+  border-color: var(--atlas-field-control-border-error);
+  box-shadow: 0 0 0 1px var(--atlas-field-control-border-error);
+}
+
+.control[data-disabled="true"] {
+  color: var(--atlas-field-control-disabled-text);
+  background: var(--atlas-field-control-background-disabled);
+  cursor: not-allowed;
+}
+
+.control[data-readonly="true"] {
+  background: transparent;
+  border-color: transparent;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: var(--atlas-field-control-padding-y) var(--atlas-field-control-padding-x);
+  color: inherit;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.input::placeholder {
+  color: var(--atlas-field-control-placeholder);
+  opacity: 1;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.input:read-only {
+  cursor: default;
+}
+
+.icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--atlas-color-text-secondary);
+}
+
+.iconStart {
+  margin-left: var(--atlas-space-sm);
+}
+
+.iconEnd {
+  margin-right: var(--atlas-space-sm);
+}
+
+.control:has(.iconStart) .input {
+  padding-left: var(--atlas-space-sm);
+}
+
+.control:has(.iconEnd) .input {
+  padding-right: var(--atlas-space-sm);
+}

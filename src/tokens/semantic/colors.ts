@@ -25,6 +25,9 @@ export const semanticColors = {
     primaryHover: "var(--atlas-color-action-primary-hover)",
     primaryActive: "var(--atlas-color-action-primary-active)",
   },
+  status: {
+    error: "var(--atlas-color-status-error)",
+  },
 } as const;
 
 export type SemanticColorToken = typeof semanticColors;

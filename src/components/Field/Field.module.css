@@ -1,0 +1,49 @@
+.field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--atlas-field-gap);
+  min-width: 0;
+}
+
+.field[data-full-width="true"] {
+  width: 100%;
+}
+
+.label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--atlas-space-xs);
+  color: var(--atlas-field-label-color);
+  font-family: var(--atlas-font-family-sans);
+  font-size: var(--atlas-font-size-body-2);
+  font-weight: var(--atlas-font-weight-body-2);
+  line-height: var(--atlas-line-height-body-2);
+}
+
+.label[data-disabled="true"] {
+  color: var(--atlas-field-label-disabled-color);
+}
+
+.required {
+  color: var(--atlas-field-required-color);
+}
+
+.helperText,
+.errorText {
+  margin: 0;
+  font-family: var(--atlas-font-family-sans);
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.helperText {
+  color: var(--atlas-field-helper-color);
+}
+
+.helperText[data-disabled="true"] {
+  color: var(--atlas-field-helper-disabled-color);
+}
+
+.errorText {
+  color: var(--atlas-field-error-color);
+}

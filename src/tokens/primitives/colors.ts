@@ -18,6 +18,7 @@ export const primitiveColors = {
   textTertiary: "#949494",
   textOnPrimary: "#FFFFFF",
   textLink: "#76BBFF",
+  error: "#FF5252",
 } as const;
 
 export type PrimitiveColorToken = keyof typeof primitiveColors;

@@ -1,0 +1,136 @@
+.root {
+  display: inline-flex;
+  align-items: flex-start;
+  color: var(--atlas-checkbox-label-color);
+  font-family: var(--atlas-font-family-sans);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atlas-checkbox-stack-gap);
+  min-width: 0;
+}
+
+.root[data-disabled="true"] .container {
+  opacity: 0.4;
+}
+
+.area {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--atlas-checkbox-gap);
+  min-height: 1.25rem;
+  cursor: pointer;
+}
+
+.root[data-disabled="true"] .area {
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.box {
+  position: relative;
+  display: inline-flex;
+  width: var(--atlas-checkbox-size);
+  height: var(--atlas-checkbox-size);
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  background: var(--atlas-checkbox-background);
+  border: 1px solid var(--atlas-checkbox-border);
+  border-radius: var(--atlas-checkbox-radius);
+}
+
+.area:hover .box {
+  background: var(--atlas-checkbox-background-hover);
+  border-color: var(--atlas-checkbox-border-hover);
+}
+
+.input:focus-visible + .box {
+  box-shadow: 0 0 0 2px var(--atlas-checkbox-border-focus);
+}
+
+.input:checked + .box,
+.input[data-indeterminate="true"] + .box {
+  background: var(--atlas-checkbox-checked-background);
+  border-color: var(--atlas-checkbox-checked-background);
+}
+
+.root[data-invalid="true"] .box {
+  border-color: var(--atlas-checkbox-border-error);
+}
+
+.indicator {
+  position: absolute;
+  display: none;
+  color: var(--atlas-color-text-on-primary);
+}
+
+.input:checked + .box .indicator[data-state="checked"],
+.input[data-indeterminate="true"] + .box .indicator[data-state="indeterminate"] {
+  display: inline-flex;
+}
+
+.checkMark {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.minusMark {
+  width: 0.625rem;
+  height: 2px;
+  background: var(--atlas-color-text-on-primary);
+  border-radius: 999px;
+}
+
+.label {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--atlas-checkbox-label-color);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  white-space: nowrap;
+}
+
+.required {
+  color: var(--atlas-checkbox-error-color);
+}
+
+.subtext,
+.error {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  white-space: nowrap;
+}
+
+.subtext {
+  color: var(--atlas-checkbox-subtext-color);
+}
+
+.error {
+  color: var(--atlas-checkbox-error-color);
+}
+
+.errorRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--atlas-space-xs);
+}
