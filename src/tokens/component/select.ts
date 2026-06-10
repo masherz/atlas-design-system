@@ -1,0 +1,27 @@
+export const selectTokens = {
+  width: "var(--atlas-select-width)",
+  triggerHeight: "var(--atlas-select-trigger-height)",
+  triggerPaddingX: "var(--atlas-select-trigger-padding-x)",
+  triggerGap: "var(--atlas-select-trigger-gap)",
+  triggerBackground: "var(--atlas-select-trigger-background)",
+  triggerOpenBackground: "var(--atlas-select-trigger-background-open)",
+  triggerBorder: "var(--atlas-select-trigger-border)",
+  triggerFocusBorder: "var(--atlas-select-trigger-border-focus)",
+  triggerRadius: "var(--atlas-select-trigger-radius)",
+  triggerFocusRing: "var(--atlas-select-trigger-focus-ring)",
+  placeholder: "var(--atlas-select-placeholder)",
+  text: "var(--atlas-select-text)",
+  icon: "var(--atlas-select-icon)",
+  menuBackground: "var(--atlas-select-menu-background)",
+  menuRadius: "var(--atlas-select-menu-radius)",
+  menuShadow: "var(--atlas-select-menu-shadow)",
+  optionPaddingX: "var(--atlas-select-option-padding-x)",
+  optionPaddingY: "var(--atlas-select-option-padding-y)",
+  optionHoverBackground: "var(--atlas-select-option-background-hover)",
+  optionHoverText: "var(--atlas-select-option-text-hover)",
+  pillBackground: "var(--atlas-select-pill-background)",
+  pillBorder: "var(--atlas-select-pill-border)",
+  pillRadius: "var(--atlas-select-pill-radius)",
+} as const;
+
+export type SelectToken = keyof typeof selectTokens;

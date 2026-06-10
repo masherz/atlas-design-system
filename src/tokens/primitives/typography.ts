@@ -1,5 +1,6 @@
 export const primitiveTypography = {
-  fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+  fontFamily: "Geist, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+  fontFamilyMono: '"Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   label2: {
     fontSize: "0.75rem",
     lineHeight: "1.125rem",

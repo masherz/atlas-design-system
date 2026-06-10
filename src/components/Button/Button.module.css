@@ -103,6 +103,38 @@
   background: var(--atlas-color-background-interactive-active);
 }
 
+.tertiary {
+  color: var(--atlas-color-text-secondary-action);
+  background: transparent;
+  border-color: transparent;
+}
+
+.tertiary:hover:not(:disabled) {
+  color: var(--atlas-color-text-secondary-action-hover);
+  background: var(--atlas-color-background-interactive-hover);
+}
+
+.tertiary:active:not(:disabled) {
+  color: var(--atlas-color-text-secondary-action-hover);
+  background: var(--atlas-color-background-interactive-active);
+}
+
+.danger {
+  color: var(--atlas-color-text-danger-action);
+  background: var(--atlas-color-action-danger);
+  border-color: var(--atlas-color-action-danger);
+}
+
+.danger:hover:not(:disabled) {
+  background: var(--atlas-color-action-danger-hover);
+  border-color: var(--atlas-color-action-danger-hover);
+}
+
+.danger:active:not(:disabled) {
+  background: var(--atlas-color-action-danger-active);
+  border-color: var(--atlas-color-action-danger-active);
+}
+
 .button:disabled,
 .button[data-loading="true"] {
   opacity: 0.4;

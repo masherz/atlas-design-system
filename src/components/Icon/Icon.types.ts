@@ -17,5 +17,5 @@ export type InterchangeableIconName =
 
 export type InterchangeableIconProps = HTMLAttributes<HTMLSpanElement> & {
   icon: InterchangeableIconName;
-  size?: 12 | 14 | 16 | 20 | 24;
+  size?: 12 | 14 | 16 | 18 | 20 | 24;
 };

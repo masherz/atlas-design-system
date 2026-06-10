@@ -31,6 +31,7 @@
 }
 
 .control:focus-within {
+  background: var(--atlas-color-base-01);
   border-color: var(--atlas-field-control-border-focus);
   box-shadow: var(--atlas-field-control-focus-ring);
 }
@@ -48,11 +49,19 @@
   color: var(--atlas-field-control-disabled-text);
   background: var(--atlas-field-control-background-disabled);
   cursor: not-allowed;
+  opacity: 0.4;
 }
 
 .control[data-readonly="true"] {
+  min-height: auto;
   background: transparent;
   border-color: transparent;
+}
+
+.control[data-readonly="true"]:focus-within {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .input {
@@ -63,6 +72,10 @@
   color: inherit;
   background: transparent;
   border: 0;
+  font-family: var(--atlas-font-family-sans);
+  font-size: var(--atlas-font-size-body-2);
+  font-weight: 400;
+  line-height: var(--atlas-line-height-body-2);
   outline: 0;
 }
 
@@ -77,6 +90,12 @@
 
 .input:read-only {
   cursor: default;
+}
+
+.control[data-readonly="true"] .input {
+  width: auto;
+  height: auto;
+  padding: 0;
 }
 
 .icon {

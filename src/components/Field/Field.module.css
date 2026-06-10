@@ -12,7 +12,7 @@
 .label {
   display: inline-flex;
   align-items: baseline;
-  gap: var(--atlas-space-xs);
+  gap: 0.125rem;
   color: var(--atlas-field-label-color);
   font-family: var(--atlas-font-family-sans);
   font-size: var(--atlas-font-size-body-2);
@@ -33,6 +33,7 @@
   margin: 0;
   font-family: var(--atlas-font-family-sans);
   font-size: 0.75rem;
+  font-weight: 400;
   line-height: 1.125rem;
 }
 
@@ -45,5 +46,23 @@
 }
 
 .errorText {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--atlas-space-xs);
   color: var(--atlas-field-error-color);
+}
+
+.errorIcon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.0625rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
 }

@@ -1,0 +1,48 @@
+.stack {
+  display: grid;
+  gap: var(--atlas-space-md);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--atlas-space-sm);
+  align-items: center;
+}
+
+.stateGrid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: var(--atlas-space-sm) var(--atlas-space-lg);
+  align-items: center;
+}
+
+.stateGrid > span {
+  color: var(--atlas-color-text-secondary);
+  font-family: var(--atlas-font-family-sans);
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.forceHover {
+  color: var(--atlas-tag-text-hover);
+  background: var(--atlas-tag-background-hover);
+}
+
+.forceHover img,
+.forceRemoveHover img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(696%) hue-rotate(175deg) brightness(101%) contrast(103%);
+}
+
+.forceFocus {
+  border-color: var(--atlas-tag-border-focus);
+  box-shadow: var(--atlas-tag-focus-ring);
+}
+
+.forceRemoveHover button {
+  background: var(--atlas-tag-remove-background-hover);
+}
+
+.cloudExample {
+  max-width: 24rem;
+}

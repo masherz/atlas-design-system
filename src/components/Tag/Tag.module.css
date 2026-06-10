@@ -1,0 +1,112 @@
+.tag {
+  display: inline-flex;
+  min-width: 0;
+  min-height: var(--atlas-tag-height);
+  align-items: center;
+  gap: var(--atlas-tag-gap);
+  padding: 0 var(--atlas-tag-padding-x);
+  color: var(--atlas-tag-text);
+  background: var(--atlas-tag-background);
+  border: 1px solid var(--atlas-tag-border);
+  border-radius: var(--atlas-tag-radius);
+  font-family: var(--atlas-font-family-sans);
+  font-size: var(--atlas-tag-font-size);
+  font-weight: 400;
+  line-height: var(--atlas-tag-line-height);
+  white-space: nowrap;
+  transition:
+    background-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    border-color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    color var(--atlas-duration-fast) var(--atlas-ease-standard),
+    box-shadow var(--atlas-duration-fast) var(--atlas-ease-standard);
+}
+
+.tag:hover,
+.tag[data-selected="true"] {
+  color: var(--atlas-tag-text-hover);
+  background: var(--atlas-tag-background-hover);
+}
+
+.tag:focus-within {
+  border-color: var(--atlas-tag-border-focus);
+  box-shadow: var(--atlas-tag-focus-ring);
+}
+
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.leftIcon {
+  display: inline-flex;
+  width: 0.75rem;
+  height: 0.75rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag:hover .leftIcon img,
+.tag[data-selected="true"] .leftIcon img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(696%) hue-rotate(175deg) brightness(101%) contrast(103%);
+}
+
+.count {
+  display: inline-flex;
+  height: var(--atlas-tag-count-height);
+  min-width: var(--atlas-tag-count-height);
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--atlas-tag-count-padding-x);
+  color: var(--atlas-tag-count-text);
+  background: var(--atlas-tag-count-background);
+  border-radius: var(--atlas-tag-radius);
+  font-size: var(--atlas-tag-count-font-size);
+  line-height: var(--atlas-tag-count-line-height);
+}
+
+.removeButton {
+  display: inline-flex;
+  width: var(--atlas-tag-remove-size);
+  height: var(--atlas-tag-remove-size);
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--atlas-tag-icon);
+  background: transparent;
+  border: 0;
+  border-radius: var(--atlas-radius-default);
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background: var(--atlas-tag-remove-background-hover);
+}
+
+.removeButton:focus {
+  outline: none;
+}
+
+.removeButton:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--atlas-tag-border-focus);
+}
+
+.removeButton:hover img,
+.removeButton:focus-visible img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(696%) hue-rotate(175deg) brightness(101%) contrast(103%);
+}
+
+.cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--atlas-tag-cloud-gap);
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none;
+  }
+}

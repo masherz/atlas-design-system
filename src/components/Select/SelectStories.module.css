@@ -1,0 +1,9 @@
+.examples {
+  display: grid;
+  gap: var(--atlas-space-xl);
+}
+
+.longList {
+  max-height: 18rem;
+  overflow-y: auto;
+}
